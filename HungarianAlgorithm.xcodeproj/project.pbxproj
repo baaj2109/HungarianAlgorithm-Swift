@@ -1,0 +1,587 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DED6F3C92643D1530081B10E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED6F3C82643D1530081B10E /* AppDelegate.swift */; };
+		DED6F3CB2643D1530081B10E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED6F3CA2643D1530081B10E /* ViewController.swift */; };
+		DED6F3CD2643D1540081B10E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DED6F3CC2643D1540081B10E /* Assets.xcassets */; };
+		DED6F3D02643D1540081B10E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DED6F3CE2643D1540081B10E /* Main.storyboard */; };
+		DED6F3DC2643D1540081B10E /* HungarianAlgorithmTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED6F3DB2643D1540081B10E /* HungarianAlgorithmTests.swift */; };
+		DED6F3E72643D1540081B10E /* HungarianAlgorithmUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED6F3E62643D1540081B10E /* HungarianAlgorithmUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DED6F3D82643D1540081B10E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DED6F3BD2643D1530081B10E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DED6F3C42643D1530081B10E;
+			remoteInfo = HungarianAlgorithm;
+		};
+		DED6F3E32643D1540081B10E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DED6F3BD2643D1530081B10E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DED6F3C42643D1530081B10E;
+			remoteInfo = HungarianAlgorithm;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		DED6F3C52643D1530081B10E /* HungarianAlgorithm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HungarianAlgorithm.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DED6F3C82643D1530081B10E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DED6F3CA2643D1530081B10E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DED6F3CC2643D1540081B10E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DED6F3CF2643D1540081B10E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DED6F3D12643D1540081B10E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DED6F3D22643D1540081B10E /* HungarianAlgorithm.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HungarianAlgorithm.entitlements; sourceTree = "<group>"; };
+		DED6F3D72643D1540081B10E /* HungarianAlgorithmTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HungarianAlgorithmTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DED6F3DB2643D1540081B10E /* HungarianAlgorithmTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HungarianAlgorithmTests.swift; sourceTree = "<group>"; };
+		DED6F3DD2643D1540081B10E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DED6F3E22643D1540081B10E /* HungarianAlgorithmUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HungarianAlgorithmUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DED6F3E62643D1540081B10E /* HungarianAlgorithmUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HungarianAlgorithmUITests.swift; sourceTree = "<group>"; };
+		DED6F3E82643D1540081B10E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DED6F3C22643D1530081B10E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DED6F3D42643D1540081B10E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DED6F3DF2643D1540081B10E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DED6F3BC2643D1530081B10E = {
+			isa = PBXGroup;
+			children = (
+				DED6F3C72643D1530081B10E /* HungarianAlgorithm */,
+				DED6F3DA2643D1540081B10E /* HungarianAlgorithmTests */,
+				DED6F3E52643D1540081B10E /* HungarianAlgorithmUITests */,
+				DED6F3C62643D1530081B10E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DED6F3C62643D1530081B10E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DED6F3C52643D1530081B10E /* HungarianAlgorithm.app */,
+				DED6F3D72643D1540081B10E /* HungarianAlgorithmTests.xctest */,
+				DED6F3E22643D1540081B10E /* HungarianAlgorithmUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DED6F3C72643D1530081B10E /* HungarianAlgorithm */ = {
+			isa = PBXGroup;
+			children = (
+				DED6F3C82643D1530081B10E /* AppDelegate.swift */,
+				DED6F3CA2643D1530081B10E /* ViewController.swift */,
+				DED6F3CC2643D1540081B10E /* Assets.xcassets */,
+				DED6F3CE2643D1540081B10E /* Main.storyboard */,
+				DED6F3D12643D1540081B10E /* Info.plist */,
+				DED6F3D22643D1540081B10E /* HungarianAlgorithm.entitlements */,
+			);
+			path = HungarianAlgorithm;
+			sourceTree = "<group>";
+		};
+		DED6F3DA2643D1540081B10E /* HungarianAlgorithmTests */ = {
+			isa = PBXGroup;
+			children = (
+				DED6F3DB2643D1540081B10E /* HungarianAlgorithmTests.swift */,
+				DED6F3DD2643D1540081B10E /* Info.plist */,
+			);
+			path = HungarianAlgorithmTests;
+			sourceTree = "<group>";
+		};
+		DED6F3E52643D1540081B10E /* HungarianAlgorithmUITests */ = {
+			isa = PBXGroup;
+			children = (
+				DED6F3E62643D1540081B10E /* HungarianAlgorithmUITests.swift */,
+				DED6F3E82643D1540081B10E /* Info.plist */,
+			);
+			path = HungarianAlgorithmUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DED6F3C42643D1530081B10E /* HungarianAlgorithm */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DED6F3EB2643D1540081B10E /* Build configuration list for PBXNativeTarget "HungarianAlgorithm" */;
+			buildPhases = (
+				DED6F3C12643D1530081B10E /* Sources */,
+				DED6F3C22643D1530081B10E /* Frameworks */,
+				DED6F3C32643D1530081B10E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HungarianAlgorithm;
+			productName = HungarianAlgorithm;
+			productReference = DED6F3C52643D1530081B10E /* HungarianAlgorithm.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DED6F3D62643D1540081B10E /* HungarianAlgorithmTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DED6F3EE2643D1540081B10E /* Build configuration list for PBXNativeTarget "HungarianAlgorithmTests" */;
+			buildPhases = (
+				DED6F3D32643D1540081B10E /* Sources */,
+				DED6F3D42643D1540081B10E /* Frameworks */,
+				DED6F3D52643D1540081B10E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DED6F3D92643D1540081B10E /* PBXTargetDependency */,
+			);
+			name = HungarianAlgorithmTests;
+			productName = HungarianAlgorithmTests;
+			productReference = DED6F3D72643D1540081B10E /* HungarianAlgorithmTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		DED6F3E12643D1540081B10E /* HungarianAlgorithmUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DED6F3F12643D1540081B10E /* Build configuration list for PBXNativeTarget "HungarianAlgorithmUITests" */;
+			buildPhases = (
+				DED6F3DE2643D1540081B10E /* Sources */,
+				DED6F3DF2643D1540081B10E /* Frameworks */,
+				DED6F3E02643D1540081B10E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DED6F3E42643D1540081B10E /* PBXTargetDependency */,
+			);
+			name = HungarianAlgorithmUITests;
+			productName = HungarianAlgorithmUITests;
+			productReference = DED6F3E22643D1540081B10E /* HungarianAlgorithmUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DED6F3BD2643D1530081B10E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					DED6F3C42643D1530081B10E = {
+						CreatedOnToolsVersion = 12.5;
+					};
+					DED6F3D62643D1540081B10E = {
+						CreatedOnToolsVersion = 12.5;
+						TestTargetID = DED6F3C42643D1530081B10E;
+					};
+					DED6F3E12643D1540081B10E = {
+						CreatedOnToolsVersion = 12.5;
+						TestTargetID = DED6F3C42643D1530081B10E;
+					};
+				};
+			};
+			buildConfigurationList = DED6F3C02643D1530081B10E /* Build configuration list for PBXProject "HungarianAlgorithm" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DED6F3BC2643D1530081B10E;
+			productRefGroup = DED6F3C62643D1530081B10E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DED6F3C42643D1530081B10E /* HungarianAlgorithm */,
+				DED6F3D62643D1540081B10E /* HungarianAlgorithmTests */,
+				DED6F3E12643D1540081B10E /* HungarianAlgorithmUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DED6F3C32643D1530081B10E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DED6F3CD2643D1540081B10E /* Assets.xcassets in Resources */,
+				DED6F3D02643D1540081B10E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DED6F3D52643D1540081B10E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DED6F3E02643D1540081B10E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DED6F3C12643D1530081B10E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DED6F3CB2643D1530081B10E /* ViewController.swift in Sources */,
+				DED6F3C92643D1530081B10E /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DED6F3D32643D1540081B10E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DED6F3DC2643D1540081B10E /* HungarianAlgorithmTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DED6F3DE2643D1540081B10E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DED6F3E72643D1540081B10E /* HungarianAlgorithmUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DED6F3D92643D1540081B10E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DED6F3C42643D1530081B10E /* HungarianAlgorithm */;
+			targetProxy = DED6F3D82643D1540081B10E /* PBXContainerItemProxy */;
+		};
+		DED6F3E42643D1540081B10E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DED6F3C42643D1530081B10E /* HungarianAlgorithm */;
+			targetProxy = DED6F3E32643D1540081B10E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DED6F3CE2643D1540081B10E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DED6F3CF2643D1540081B10E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DED6F3E92643D1540081B10E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		DED6F3EA2643D1540081B10E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		DED6F3EC2643D1540081B10E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = HungarianAlgorithm/HungarianAlgorithm.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = DBLB4W7C6C;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = HungarianAlgorithm/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ipevo.macos.HungarianAlgorithm;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		DED6F3ED2643D1540081B10E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = HungarianAlgorithm/HungarianAlgorithm.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = DBLB4W7C6C;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = HungarianAlgorithm/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ipevo.macos.HungarianAlgorithm;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		DED6F3EF2643D1540081B10E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = DBLB4W7C6C;
+				INFOPLIST_FILE = HungarianAlgorithmTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ipevo.macos.HungarianAlgorithmTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HungarianAlgorithm.app/Contents/MacOS/HungarianAlgorithm";
+			};
+			name = Debug;
+		};
+		DED6F3F02643D1540081B10E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = DBLB4W7C6C;
+				INFOPLIST_FILE = HungarianAlgorithmTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ipevo.macos.HungarianAlgorithmTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HungarianAlgorithm.app/Contents/MacOS/HungarianAlgorithm";
+			};
+			name = Release;
+		};
+		DED6F3F22643D1540081B10E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = DBLB4W7C6C;
+				INFOPLIST_FILE = HungarianAlgorithmUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ipevo.macos.HungarianAlgorithmUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = HungarianAlgorithm;
+			};
+			name = Debug;
+		};
+		DED6F3F32643D1540081B10E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = DBLB4W7C6C;
+				INFOPLIST_FILE = HungarianAlgorithmUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ipevo.macos.HungarianAlgorithmUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = HungarianAlgorithm;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DED6F3C02643D1530081B10E /* Build configuration list for PBXProject "HungarianAlgorithm" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DED6F3E92643D1540081B10E /* Debug */,
+				DED6F3EA2643D1540081B10E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DED6F3EB2643D1540081B10E /* Build configuration list for PBXNativeTarget "HungarianAlgorithm" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DED6F3EC2643D1540081B10E /* Debug */,
+				DED6F3ED2643D1540081B10E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DED6F3EE2643D1540081B10E /* Build configuration list for PBXNativeTarget "HungarianAlgorithmTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DED6F3EF2643D1540081B10E /* Debug */,
+				DED6F3F02643D1540081B10E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DED6F3F12643D1540081B10E /* Build configuration list for PBXNativeTarget "HungarianAlgorithmUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DED6F3F22643D1540081B10E /* Debug */,
+				DED6F3F32643D1540081B10E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DED6F3BD2643D1530081B10E /* Project object */;
+}
