@@ -13,6 +13,9 @@
 		DED6F3D02643D1540081B10E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DED6F3CE2643D1540081B10E /* Main.storyboard */; };
 		DED6F3DC2643D1540081B10E /* HungarianAlgorithmTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED6F3DB2643D1540081B10E /* HungarianAlgorithmTests.swift */; };
 		DED6F3E72643D1540081B10E /* HungarianAlgorithmUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED6F3E62643D1540081B10E /* HungarianAlgorithmUITests.swift */; };
+		DED6F3F52643D1630081B10E /* HungarianAlgorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED6F3F42643D1630081B10E /* HungarianAlgorithm.swift */; };
+		DED6F3F72643D1D50081B10E /* HungarianState.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED6F3F62643D1D50081B10E /* HungarianState.swift */; };
+		DED6F3F92643D1E60081B10E /* MatrixUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED6F3F82643D1E60081B10E /* MatrixUtils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +49,9 @@
 		DED6F3E22643D1540081B10E /* HungarianAlgorithmUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HungarianAlgorithmUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DED6F3E62643D1540081B10E /* HungarianAlgorithmUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HungarianAlgorithmUITests.swift; sourceTree = "<group>"; };
 		DED6F3E82643D1540081B10E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DED6F3F42643D1630081B10E /* HungarianAlgorithm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HungarianAlgorithm.swift; sourceTree = "<group>"; };
+		DED6F3F62643D1D50081B10E /* HungarianState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HungarianState.swift; sourceTree = "<group>"; };
+		DED6F3F82643D1E60081B10E /* MatrixUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatrixUtils.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +104,9 @@
 			children = (
 				DED6F3C82643D1530081B10E /* AppDelegate.swift */,
 				DED6F3CA2643D1530081B10E /* ViewController.swift */,
+				DED6F3F42643D1630081B10E /* HungarianAlgorithm.swift */,
+				DED6F3F62643D1D50081B10E /* HungarianState.swift */,
+				DED6F3F82643D1E60081B10E /* MatrixUtils.swift */,
 				DED6F3CC2643D1540081B10E /* Assets.xcassets */,
 				DED6F3CE2643D1540081B10E /* Main.storyboard */,
 				DED6F3D12643D1540081B10E /* Info.plist */,
@@ -253,6 +262,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DED6F3F92643D1E60081B10E /* MatrixUtils.swift in Sources */,
+				DED6F3F52643D1630081B10E /* HungarianAlgorithm.swift in Sources */,
+				DED6F3F72643D1D50081B10E /* HungarianState.swift in Sources */,
 				DED6F3CB2643D1530081B10E /* ViewController.swift in Sources */,
 				DED6F3C92643D1530081B10E /* AppDelegate.swift in Sources */,
 			);

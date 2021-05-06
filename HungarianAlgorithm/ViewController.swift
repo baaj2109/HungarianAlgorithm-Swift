@@ -13,13 +13,20 @@ class ViewController: NSViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        
+        let data = [
+            [4.0, 1.0, 3.0],
+            [2.0, 0.0, 5.0],
+            [3.0, 2.0, 2.0]
+        ]
+
+        let linear_assignment = HungarianAlgorithm(data: data)
+        let result = linear_assignment.forward()
+        print(result)
+        
     }
 
-    override var representedObject: Any? {
-        didSet {
-        // Update the view, if already loaded.
-        }
-    }
 
 
 }
