@@ -19,6 +19,8 @@ public enum HungarianStep {
 @available(macOS 10.15, *)
 public class HungarianAlgorithm {
     
+    public static let INFTY_COST = 1e+5
+    
     var data: [[Double]]
     init(data:[[Double]]) {
         self.data = data
@@ -60,7 +62,9 @@ public class HungarianAlgorithm {
             }
         }
         if state.shouldTranspose {
-            result = matrixTranspose(result)
+            for i in result.indices {
+                result[i] = result[i].reversed()
+            }
         }
         return result
     }
@@ -80,14 +84,13 @@ public class HungarianAlgorithm {
         for (i, row) in state.copy.enumerated() {
             let indexes = row.enumerated().filter { $0.element == 0 }.map{$0.offset}
             for j in indexes {
-                if state.col_uncovered[j] && state.row_uncovered[i] {
+                if state.col_uncovered[i] && state.row_uncovered[j] {
                     state.marked[i][j] = 1
-                    state.col_uncovered[j] = false
-                    state.row_uncovered[i] = false
+                    state.col_uncovered[i] = false
+                    state.row_uncovered[j] = false
                 }
             }
         }
-        
         state._clear_covers()
         return HungarianStep.step3
     }
@@ -149,7 +152,7 @@ public class HungarianAlgorithm {
                     return HungarianStep.step6
                     
                 } else  {
-                    state.copy[row][col] = 2
+                    state.marked[row][col] = 2
                     /// Find the first starred element in the row
                     let star_col = state.marked[row].firstIndex(of: 1) != nil ? state.marked[row].firstIndex(of: 1)! : 0
                                 
@@ -278,6 +281,3 @@ public class HungarianAlgorithm {
         return HungarianStep.step4
     }
 }
-
-
-
