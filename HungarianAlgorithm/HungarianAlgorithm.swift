@@ -84,10 +84,10 @@ public class HungarianAlgorithm {
         for (i, row) in state.copy.enumerated() {
             let indexes = row.enumerated().filter { $0.element == 0 }.map{$0.offset}
             for j in indexes {
-                if state.col_uncovered[i] && state.row_uncovered[j] {
+                if state.col_uncovered[j] && state.row_uncovered[i] {
                     state.marked[i][j] = 1
-                    state.col_uncovered[i] = false
-                    state.row_uncovered[j] = false
+                    state.col_uncovered[j] = false
+                    state.row_uncovered[i] = false
                 }
             }
         }

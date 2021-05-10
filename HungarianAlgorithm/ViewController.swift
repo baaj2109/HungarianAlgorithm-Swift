@@ -16,10 +16,15 @@ class ViewController: NSViewController {
         
         
         let data = [
-            [4.0, 1.0, 3.0],
-            [2.0, 0.0, 5.0],
-            [3.0, 2.0, 2.0]
+//            [4.0, 1.0, 3.0],
+//            [2.0, 0.0, 5.0],
+//            [3.0, 2.0, 2.0]
+            [0.20001000000000002, 0.20001000000000002],
+            [0.009166869538691724, 0.20001000000000002]
         ]
+//        let data = [
+//            [-27660350448.51619, -31784043413.006424]
+//        ]
 
         let linear_assignment = HungarianAlgorithm(data: data)
         let result = linear_assignment.forward()
