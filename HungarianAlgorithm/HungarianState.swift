@@ -41,8 +41,8 @@ internal class HungarianState {
             self.copy = data
         }
         
-        self.n = data.count
-        self.m = data[0].count
+        self.n = self.copy.count
+        self.m = self.copy[0].count
         
         self.row_uncovered = [Bool](repeating: true, count: self.n)
         self.col_uncovered = [Bool](repeating: true, count: self.m)

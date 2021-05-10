@@ -270,8 +270,8 @@ public class HungarianAlgorithm {
             minimum = -1 * minimum
             for (i, v) in state.col_uncovered.enumerated() {
                 if v == true {
-                    var c = [Double](repeating: 0, count: state.copy[i].count)
-                    vDSP_vsaddD(copy[i], 1, &minimum, &c, 1, vDSP_Length(state.copy[i].count))
+                    var c = [Double](repeating: 0, count: copy[i].count)
+                    vDSP_vsaddD(copy[i], 1, &minimum, &c, 1, vDSP_Length(copy[i].count))
                     copy[i] = c
                 }
             }
