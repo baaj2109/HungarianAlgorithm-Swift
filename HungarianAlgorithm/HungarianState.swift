@@ -14,17 +14,17 @@
  */
 internal class HungarianState {
     
-    var data: [[Double]]
+    let data: [[Double]]
     var copy: [[Double]]
-    var n: Int
-    var m: Int
-    var row_uncovered: [Bool]
-    var col_uncovered: [Bool]
-    var z0_r: Int
-    var z0_c: Int
-    var path: [[Double]]
+    let n: Int
+    let m: Int
+    var rowUncovered: [Bool]
+    var colUncovered: [Bool]
+    var z0R: Int
+    var z0C: Int
+    let path: [[Double]]
     var marked: [[Double]]
-    var shouldTranspose: Bool
+    let shouldTranspose: Bool
     
     init(data: [[Double]]) {
         
@@ -44,10 +44,10 @@ internal class HungarianState {
         self.n = self.copy.count
         self.m = self.copy[0].count
         
-        self.row_uncovered = [Bool](repeating: true, count: self.n)
-        self.col_uncovered = [Bool](repeating: true, count: self.m)
-        self.z0_r = 0
-        self.z0_c = 0
+        self.rowUncovered = [Bool](repeating: true, count: self.n)
+        self.colUncovered = [Bool](repeating: true, count: self.m)
+        self.z0R = 0
+        self.z0C = 0
         self.path = [[Double]](repeating: [Double](repeating: 0, count: 2),
                                count: self.n + self.m)
         self.marked = [[Double]](repeating: [Double](repeating: 0, count:  self.m),
@@ -55,7 +55,7 @@ internal class HungarianState {
     }
     
     /// Find the first prime element in the specified row. Returns the column index, or -1 if no starred element was found.
-    func _find_prime_in_row(row: Int) -> Int {
+    func _findPrimeInRow(row: Int) -> Int {
         var col = self.marked[row].firstIndex(of: 2) != nil ? self.marked[row].firstIndex(of: 2)! : 0
         if marked[row][col] != 2 {
             col = -1
@@ -64,9 +64,8 @@ internal class HungarianState {
     }
     
     /// Clear all covered matrix cells
-    func _clear_covers() {
-        self.row_uncovered = [Bool](repeating: true, count: self.n)
-        self.col_uncovered = [Bool](repeating: true, count: self.m)
+    func _clearCovers() {
+        self.rowUncovered = [Bool](repeating: true, count: self.n)
+        self.colUncovered = [Bool](repeating: true, count: self.m)
     }
 }
-

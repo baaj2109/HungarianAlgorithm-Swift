@@ -436,7 +436,7 @@
 				CODE_SIGN_ENTITLEMENTS = HungarianAlgorithm/HungarianAlgorithm.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = DBLB4W7C6C;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = HungarianAlgorithm/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -457,7 +457,7 @@
 				CODE_SIGN_ENTITLEMENTS = HungarianAlgorithm/HungarianAlgorithm.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = DBLB4W7C6C;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = HungarianAlgorithm/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

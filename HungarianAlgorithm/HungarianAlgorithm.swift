@@ -21,7 +21,7 @@ public class HungarianAlgorithm {
     
     public static let INFTY_COST = 1e+5
     
-    var data: [[Double]]
+    let data: [[Double]]
     init(data:[[Double]]) {
         self.data = data
     }
@@ -66,7 +66,7 @@ public class HungarianAlgorithm {
                 result[i] = result[i].reversed()
             }
         }
-        return result
+        return (result)
     }
     
     func step1(_ state: HungarianState) -> HungarianStep {
@@ -82,16 +82,16 @@ public class HungarianAlgorithm {
         /// starred zero in its row or column, star Z. Repeat for each element
         /// in the matrix.
         for (i, row) in state.copy.enumerated() {
-            let indexes = row.enumerated().filter { $0.element == 0 }.map{$0.offset}
+            let indexes = row.enumerated().filter {$0.element == 0}.map{$0.offset}
             for j in indexes {
-                if state.col_uncovered[j] && state.row_uncovered[i] {
+                if state.colUncovered[j] && state.rowUncovered[i] {
                     state.marked[i][j] = 1
-                    state.col_uncovered[j] = false
-                    state.row_uncovered[i] = false
+                    state.colUncovered[j] = false
+                    state.rowUncovered[i] = false
                 }
             }
         }
-        state._clear_covers()
+        state._clearCovers()
         return HungarianStep.step3
     }
     
@@ -99,13 +99,13 @@ public class HungarianAlgorithm {
         /// Cover each column containing a starred zero. If n columns are covered,
         /// the starred zeros describe a complete set of unique assignments.
         /// In this case, Go to DONE, otherwise, Go to Step 4.
-        let flatten_marked = matrixFlatten(state.marked)
+        let flattenMarked = matrixFlatten(state.marked)
         let n = state.marked[0].count
         var count = 0
-        for (i,v) in flatten_marked.enumerated() {
+        for (i, v) in flattenMarked.enumerated() {
             if v == 1 {
                 count += 1
-                state.col_uncovered[i % n] = false
+                state.colUncovered[i % n] = false
             }
         }
         if count < state.copy.count {
@@ -123,59 +123,58 @@ public class HungarianAlgorithm {
         
         var copy = [[Double]](repeating: [Double](repeating: 0, count: state.copy[0].count),
                               count: state.copy.count)
-        
         let n = state.copy.count
         let m = state.copy[0].count
-        var covered_c = matrixFlatten(state.copy)
-        for (i,v) in covered_c.enumerated() {
+        var coveredCopy = matrixFlatten(state.copy)
+        for (i,v) in coveredCopy.enumerated() {
             
-            covered_c[i] = v == 0 ? 1 : 0
+            coveredCopy[i] = v == 0 ? 1 : 0
             if v == 0 {
                 copy[i / m][i % m] = 1
             }
             
-            if state.row_uncovered[i / m] == false {
-                covered_c[i] = 0
+            if state.rowUncovered[i / m] == false {
+                coveredCopy[i] = 0
             }
             
-            if state.col_uncovered[i % m] == false {
-                covered_c[i] = 0
+            if state.colUncovered[i % m] == false {
+                coveredCopy[i] = 0
             }
         }
         while true {
-            if let maxValue = covered_c.max(),
-               let maxIndex = covered_c.firstIndex(of: maxValue) {
+            if let maxValue = coveredCopy.max(),
+               let maxIndex = coveredCopy.firstIndex(of: maxValue) {
                 let row = maxIndex / m
                 var col = maxIndex % m
 
-                if covered_c[row * m + col] == 0 {
+                if coveredCopy[row * m + col] == 0 {
                     return HungarianStep.step6
                     
                 } else  {
                     state.marked[row][col] = 2
                     /// Find the first starred element in the row
-                    let star_col = state.marked[row].firstIndex(of: 1) != nil ? state.marked[row].firstIndex(of: 1)! : 0
+                    let startCol = state.marked[row].firstIndex(of: 1) != nil ? state.marked[row].firstIndex(of: 1)! : 0
                                 
-                    if state.marked[row][star_col] != 1 {
+                    if state.marked[row][startCol] != 1 {
                         /// Could not find one
-                        state.z0_r = row
-                        state.z0_c = col
+                        state.z0R = row
+                        state.z0C = col
                         return HungarianStep.step5
                         
                     } else {
-                        col = star_col
-                        state.row_uncovered[row] = false
-                        state.col_uncovered[col] = true
+                        col = startCol
+                        state.rowUncovered[row] = false
+                        state.colUncovered[col] = true
                         for i in 0..<n {
                             
-                            if state.row_uncovered[i] == true {
-                                covered_c[i * n + col] = copy[i][col]
+                            if state.rowUncovered[i] == true {
+                                coveredCopy[i * m + col] = copy[i][col]
                             } else {
-                                covered_c[i * n + col] = 0
+                                coveredCopy[i * m + col] = 0
                             }
                         }
                         for i in 0..<m {
-                            covered_c[row * n + i] = 0
+                            coveredCopy[row * m + i] = 0
                         }
                     }
                 }
@@ -186,32 +185,32 @@ public class HungarianAlgorithm {
     func step5(_ state: HungarianState) -> HungarianStep {
         var count = 0
         var path = state.path
-        path[count][0] = Double(state.z0_r)
-        path[count][1] = Double(state.z0_c)
+        path[count][0] = Double(state.z0R)
+        path[count][1] = Double(state.z0C)
         while true {
             /// Find the first starred element in the col defined by the path
-            let transposed_marked = matrixTranspose(state.marked)
+            let transposedMarked = matrixTranspose(state.marked)
         
-            let col_data = transposed_marked[Int(path[count][1])]
-            let row_index = col_data.firstIndex(of: 1) != nil ? col_data.firstIndex(of: 1)! : 0
+            let colData = transposedMarked[Int(path[count][1])]
+            let rowIndex = colData.firstIndex(of: 1) != nil ? colData.firstIndex(of: 1)! : 0
             
-            if state.marked[row_index][Int(path[count][1])] != 1 {
+            if state.marked[rowIndex][Int(path[count][1])] != 1 {
                 break
             } else {
                 count += 1
-                path[count][0] = Double(row_index)
+                path[count][0] = Double(rowIndex)
                 path[count][1] = path[count - 1][1]
             }
             
             /// Find the first prime element in the row defined by th first path step
-            let row_data = state.marked[Int(path[count][0])]
-            var col_index = row_data.firstIndex(of: 2) != nil ? row_data.firstIndex(of: 2)! : 0
-            if state.marked[row_index][col_index] != 2 {
-                col_index = -1
+            let rowData = state.marked[Int(path[count][0])]
+            var colIndex = rowData.firstIndex(of: 2) != nil ? rowData.firstIndex(of: 2)! : 0
+            if state.marked[rowIndex][colIndex] != 2 {
+                colIndex = -1
             }
             count += 1
             path[count][0] = path[count - 1][0]
-            path[count][1] = Double(col_index)
+            path[count][1] = Double(colIndex)
         }
         
         /// convert paths
@@ -222,7 +221,7 @@ public class HungarianAlgorithm {
                 state.marked[Int(path[i][0])][Int(path[i][1])] = 1
             }
         }
-        state._clear_covers()
+        state._clearCovers()
         /// Erase all prime markings
         for i in 0..<state.marked.count {
             for j in 0..<state.marked[i].count {
@@ -237,29 +236,29 @@ public class HungarianAlgorithm {
         /// Add the value found in Step 4 to every element of each covered row,
         /// and subtract it from every element of each uncovered column.
         /// Return to Step 4 without altering any stars, primes, or covered lines.
-        let row_uncovered_true_count = state.row_uncovered.filter{ $0 == true}.count
-        let col_uncovered_true_count = state.col_uncovered.filter{ $0 == true}.count
+        let rowUncoveredTrueCount = state.rowUncovered.filter{$0 == true}.count
+        let colUncoveredTrueCount = state.colUncovered.filter{$0 == true}.count
         
         /// the smallest uncovered value in the matrix
-        if row_uncovered_true_count > 0 && col_uncovered_true_count > 0 {
-            var minval = [Double](repeating: Double.greatestFiniteMagnitude, count: state.copy[0].count)
-            for (i, is_row_covered) in state.row_uncovered.enumerated() {
-                if is_row_covered == true {
-                    assert(minval.count == state.copy[i].count, "minval and copy should have same size, but get minval/copy is \(minval.count)/\(state.copy[i].count) .")
+        if rowUncoveredTrueCount > 0 && colUncoveredTrueCount > 0 {
+            var minVal = [Double](repeating: Double.greatestFiniteMagnitude, count: state.copy[0].count)
+            for (i, isRowCovered) in state.rowUncovered.enumerated() {
+                if isRowCovered == true {
+                    assert(minVal.count == state.copy[i].count, "minval and copy should have same size, but get minval/copy is \(minVal.count)/\(state.copy[i].count) .")
                     for (j, v) in state.copy[i].enumerated() {
-                        minval[j] = minval[j] > v ? v : minval[j]
+                        minVal[j] = minVal[j] > v ? v : minVal[j]
                     }
                 }
             }
             
             var minimum = Double.greatestFiniteMagnitude
-            for (i, is_col_covered) in state.col_uncovered.enumerated() {
-                if is_col_covered == true {
-                    minimum = minimum > minval[i] ? minval[i] : minimum
+            for (i, isColCovered) in state.colUncovered.enumerated() {
+                if isColCovered == true {
+                    minimum = minimum > minVal[i] ? minVal[i] : minimum
                 }
             }
             var copy = state.copy
-            for (i, v) in state.row_uncovered.enumerated() {
+            for (i, v) in state.rowUncovered.enumerated() {
                 if v == false {
                     var c = [Double](repeating: 0, count: state.copy[i].count)
                     vDSP_vsaddD(copy[i], 1, &minimum, &c, 1, vDSP_Length(state.copy[i].count))
@@ -268,7 +267,7 @@ public class HungarianAlgorithm {
             }
             copy = matrixTranspose(copy)
             minimum = -1 * minimum
-            for (i, v) in state.col_uncovered.enumerated() {
+            for (i, v) in state.colUncovered.enumerated() {
                 if v == true {
                     var c = [Double](repeating: 0, count: copy[i].count)
                     vDSP_vsaddD(copy[i], 1, &minimum, &c, 1, vDSP_Length(copy[i].count))
